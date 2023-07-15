@@ -1,7 +1,7 @@
 set -ex
 MODEL='bicycle_gan'
 # dataset details
-CLASS='sar2opt'  # facades, day2night, edges2shoes, edges2handbags, maps
+CLASS='sar2opt_bicycleGAN' 
 NZ=8
 NO_FLIP='--no_flip'
 DIRECTION='BtoA'
@@ -21,7 +21,7 @@ NAME=${CLASS}_${MODEL}
 CUDA_VISIBLE_DEVICES=${GPU_ID} 
 python ./train.py \
   --display_id ${DISPLAY_ID} \
-  --dataroot ./datasets/sar2opt \
+  --dataroot /home/p109g2208/arirang/UIRP1/sar2opt_dataset/sar2opt \
   --name ${NAME} \
   --model ${MODEL} \
   --direction ${DIRECTION} \

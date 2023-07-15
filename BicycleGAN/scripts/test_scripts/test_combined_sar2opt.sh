@@ -3,7 +3,7 @@ set -ex
 RESULTS_DIR='results/sar2opt'
 
 # dataset
-CLASS='sar2opt'
+CLASS='sar2opt_bicycleGAN'
 DIRECTION='BtoA' # from domain A to domain B
 LOAD_SIZE=256 # scale images to this size
 CROP_SIZE=256 # then crop to this size
@@ -17,9 +17,9 @@ NUM_SAMPLES=1 # number of samples per input images
 
 # command
 CUDA_VISIBLE_DEVICES=${GPU_ID} python ./test.py \
-  --dataroot ./datasets/${CLASS} \
+  --dataroot /home/p109g2208/arirang/UIRP1/sar2opt_dataset/sar2opt \
   --results_dir ${RESULTS_DIR} \
-  --checkpoints_dir /home/p109g2208/arirang/jongmin/BicycleGAN/checkpoint/sar2opt \
+  --checkpoints_dir /home/p109g2208/arirang/UIRP1/BicycleGAN/checkpoint/sar2opt_bicycleGAN \
   --name ${CLASS} \
   --direction ${DIRECTION} \
   --load_size ${LOAD_SIZE} \
