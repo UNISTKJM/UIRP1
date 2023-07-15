@@ -1,5 +1,6 @@
 # UIRP1
 Using Slurm GPU System
+You have to modify file path in /scripts/test_scripts/test_combined_sar2opt.sh and /scripts/train_scripts/train_combined_sar2opt.sh
 ## git clone
 
 ## Download Dataset
