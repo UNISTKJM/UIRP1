@@ -1,6 +1,9 @@
 # UIRP1
 Using Slurm GPU System
-You have to modify file path in /scripts/test_scripts/test_combined_sar2opt.sh and /scripts/train_scripts/train_combined_sar2opt.sh
+You have to modify file path in
+    
+    /scripts/test_scripts/test_combined_sar2opt.sh and /scripts/train_scripts/train_combined_sar2opt.sh
+
 ## 1. Clone the git repository
     git clone https://github.com/UNISTKJM/UIRP1.git
 
