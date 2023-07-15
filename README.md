@@ -7,16 +7,17 @@ You have to modify file path in
 ## 1. Clone the git repository
     git clone https://github.com/UNISTKJM/UIRP1.git
 
-## Download Dataset
+## 2. Download Dataset
 
     bash sar2opt_dataset_download.sh
 
 dataset will be downloaded at /sar2opt_dataset
 
-## training BicycleGAN
+## 3. BicycleGAN
+### 3-1 Training BicycleGAN
 
     sbatch train_script_run.sh
 
-## test BicycleGAN
+### 3-2 Testing BicycleGAN
 
     sbatch test_script_run.sh
