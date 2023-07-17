@@ -9,4 +9,4 @@
 #SBATCH --gres=gpu:1 #GPU 개수
 #SBATCH --nodelist=gpu2080-05
 
-python train.py --dataroot /home/p109g2208/arirang/jungmok/SAR2Opt-Heterogeneous-Dataset/data/sar2opt --display_id 0 --name sar2opt_cyclegan --model cycle_gan --batch_size 4
+python train.py --dataroot /home/p109g2208/arirang/UIRP1/sar2opt --display_id 0 --name sar2opt_cyclegan --model cycle_gan --batch_size 4

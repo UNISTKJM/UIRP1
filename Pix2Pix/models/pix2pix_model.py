@@ -1,6 +1,7 @@
 import torch
 from .base_model import BaseModel
 from . import networks
+import numpy as np
 
 
 class Pix2PixModel(BaseModel):
@@ -69,18 +70,49 @@ class Pix2PixModel(BaseModel):
             self.optimizer_D = torch.optim.Adam(self.netD.parameters(), lr=opt.lr, betas=(opt.beta1, 0.999))
             self.optimizers.append(self.optimizer_G)
             self.optimizers.append(self.optimizer_D)
+    def rand_bbox(self, size, lam):
+        W = size[2]
+        H = size[3]
+        cut_rat = np.sqrt(1. - lam)
+        cut_w = int(W * cut_rat)
+        cut_h = int(H * cut_rat)
 
+        # uniform
+        cx = np.random.randint(W)
+        cy = np.random.randint(H)
+
+        bbx1 = np.clip(cx - cut_w // 2, 0, W)
+        bby1 = np.clip(cy - cut_h // 2, 0, H)
+        bbx2 = np.clip(cx + cut_w // 2, 0, W)
+        bby2 = np.clip(cy + cut_h // 2, 0, H)
+
+        return bbx1, bby1, bbx2, bby2
+    
     def set_input(self, input):
         """Unpack input data from the dataloader and perform necessary pre-processing steps.
 
         Parameters:
             input (dict): include the data itself and its metadata information.
 
-        The option 'direction' can be used to swap images in domain A and domain B.
+        The option 'direction' can be used to swap domain A and domain B.
         """
         AtoB = self.opt.direction == 'AtoB'
         self.real_A = input['A' if AtoB else 'B'].to(self.device)
         self.real_B = input['B' if AtoB else 'A'].to(self.device)
+        
+        lam = np.random.beta(1, 1)
+        rand_index = torch.randperm(self.real_A.size()[0]).cuda()
+        # target_a = target
+        # target_b = target[rand_index]
+        real_B_1 = self.real_B
+        real_B_2 = self.real_B[rand_index]
+        
+        bbx1, bby1, bbx2, bby2 = self.rand_bbox(self.real_A.size(), lam)
+        self.real_A[:, :, bbx1:bbx2, bby1:bby2] = self.real_A[rand_index, :, bbx1:bbx2, bby1:bby2]
+        self.real_B[:, :, bbx1:bbx2, bby1:bby2] = self.real_B[rand_index, :, bbx1:bbx2, bby1:bby2]
+        # adjust lambda to exactly match pixel ratio
+        # lam = 1 - ((bbx2 - bbx1) * (bby2 - bby1) / (input.size()[-1] * input.size()[-2]))
+            
         self.image_paths = input['A_paths' if AtoB else 'B_paths']
 
     def forward(self):
