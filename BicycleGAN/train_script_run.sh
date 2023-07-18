@@ -9,4 +9,35 @@
 #SBATCH --gres=gpu:1 ## number of GPU(s) per node
 #SBATCH --nodelist=gpu2080-03
 
-sh ./scripts/train_scripts/train_combined_sar2opt.sh
+set -ex
+MODEL='bicycle_gan'
+# dataset details
+CLASS='sar2opt_bicycleGAN' 
+NZ=8
+NO_FLIP='--no_flip'
+DIRECTION='BtoA'
+LOAD_SIZE=256
+CROP_SIZE=256
+INPUT_NC=3
+NITER=100
+NITER_DECAY=100
+
+# training
+GPU_ID=0
+NAME=${CLASS}
+DATA_ROOT=/home/p109g2208/arirang/UIRP1/sar2opt_dataset/sar2opt
+
+# command
+CUDA_VISIBLE_DEVICES=${GPU_ID} 
+python ./train.py \
+  --dataroot ${DATA_ROOT} \ 
+  --name ${NAME} \
+  --model ${MODEL} \
+  --direction ${DIRECTION} \
+  --load_size ${LOAD_SIZE} \
+  --crop_size ${CROP_SIZE} \
+  --nz ${NZ} \
+  --input_nc ${INPUT_NC} \
+  --niter ${NITER} \
+  --niter_decay ${NITER_DECAY} \
+  --use_dropout

@@ -33,8 +33,7 @@ class BaseOptions():
         parser.add_argument('--num_threads', default=0, type=int, help='# sthreads for loading data')
         
         # 这一句为了测FID-Epoch修改为绝对路径
-        parser.add_argument('--checkpoints_dir', type=str, default='/workspace/Image_translation_codes/BicycleGAN/checkpoint', help='models are saved here')
-        # parser.add_argument('--checkpoints_dir', type=str, default='./checkpoint', help='models are saved here')
+        parser.add_argument('--checkpoints_dir', type=str, default='./checkpoint', help='models are saved here')
         
         parser.add_argument('--serial_batches', action='store_true', help='if true, takes images in order to make batches, otherwise takes them randomly')
         parser.add_argument('--use_dropout', action='store_true', help='use dropout for the generator')

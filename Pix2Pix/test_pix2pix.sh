@@ -9,4 +9,4 @@
 #SBATCH --gres=gpu:1 #GPU 개수
 #SBATCH --nodelist=gpu2080-04
 
-sh ./scripts/test_pix2pix.sh #파일 실행 명령어
+python test.py --dataroot /home/p109g2208/arirang/UIRP1/sar2opt_dataset/sar2opt --name facades_pix2pix --model pix2pix --netG unet_256 --direction BtoA --dataset_mode aligned --norm batch
