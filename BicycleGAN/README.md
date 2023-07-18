@@ -2,7 +2,7 @@
 Using Slurm GPU System
 
 ## BicycleGAN
-### 3-1 Training BicycleGAN
+### Training BicycleGAN
 
     sbatch train_bicyclegan.sh
 
@@ -10,7 +10,7 @@ If you use local machine,
 
     bash train_bicyclegan.sh
 
-### 3-2 Testing BicycleGAN
+### Testing BicycleGAN
 
     sbatch test_bicyclegan.sh
 
