@@ -1,23 +1,19 @@
 # UIRP1
 Using Slurm GPU System
-You have to modify file path in
-    
-    /scripts/test_scripts/test_combined_sar2opt.sh and /scripts/train_scripts/train_combined_sar2opt.sh
 
-## 1. Clone the git repository
-    git clone https://github.com/UNISTKJM/UIRP1.git
-
-## 2. Download Dataset
-
-    bash sar2opt_dataset_download.sh
-
-dataset will be downloaded at /sar2opt_dataset
-
-## 3. CycleGAN
-### 3-1 Training BicycleGAN
+## CycleGAN
+### Training cycleGAN
 
     sbatch train_script_run.sh
 
-### 3-2 Testing BicycleGAN
+If you use local machine,
+
+    bash train_cyclegan.sh
+
+### Testing cycleGAN
 
     sbatch test_script_run.sh
+
+If you use local machine,
+
+    bash test_cyclegan.sh
