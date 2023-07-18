@@ -1,10 +1,3 @@
-"""
-# > Script for measuring quantitative performances in terms of
-#    - Structural Similarity Metric (SSIM)
-#    - Peak Signal to Noise Ratio (PSNR)
-# > Maintainer: https://github.com/xahidbuffon
-"""
-## python libs
 import numpy as np
 from PIL import Image
 from glob import glob
@@ -41,16 +34,10 @@ def SSIMs_PSNRs(gtr_dir, gen_dir, im_res=(256, 256)):
         psnrs.append(psnr)
     return np.array(ssims), np.array(psnrs)
 
-
-"""
-Get datasets from
- - http://irvlab.cs.umn.edu/resources/euvp-dataset
- - http://irvlab.cs.umn.edu/resources/ufo-120-dataset
-"""
-gtr_dir = "/home/p109g2208/arirang/jongmin/BicycleGAN/results/sar2opt/test/real"
-
-## generated im paths
-gen_dir = "/home/p109g2208/arirang/jongmin/BicycleGAN/results/sar2opt/test/real"
+## Change Here ##################################################################
+gtr_dir = "/home/p109g2208/arirang/UIRP1/BicycleGAN/results/sar2opt/test/real"  #
+gen_dir = "/home/p109g2208/arirang/UIRP1/BicycleGAN/results/sar2opt/test/fake"  #
+#################################################################################
 
 
 ### compute SSIM and PSNR

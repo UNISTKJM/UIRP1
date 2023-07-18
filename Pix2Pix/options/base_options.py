@@ -25,8 +25,7 @@ class BaseOptions():
         parser.add_argument('--gpu_ids', type=str, default='0', help='gpu ids: e.g. 0  0,1,2, 0,2. use -1 for CPU')
         
         # 这一句为了测FID-Epoch修改为绝对路径
-        parser.add_argument('--checkpoints_dir', type=str, default='/home/p109g2208/arirang/UIRP1/Pix2Pix/checkpoint', help='models are saved here')
-        # parser.add_argument('--checkpoints_dir', type=str, default='./checkpoint', help='models are saved here')
+        parser.add_argument('--checkpoints_dir', type=str, default='./checkpoint', help='models are saved here')
         
         # model parameters
         parser.add_argument('--model', type=str, default='cycle_gan', help='chooses which model to use. [cycle_gan | pix2pix | test | colorization]')

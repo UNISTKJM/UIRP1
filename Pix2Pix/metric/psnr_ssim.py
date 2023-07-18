@@ -47,10 +47,10 @@ Get datasets from
  - http://irvlab.cs.umn.edu/resources/euvp-dataset
  - http://irvlab.cs.umn.edu/resources/ufo-120-dataset
 """
-gtr_dir = "/home/p109g2208/arirang/uimin/SAR2Opt-Heterogeneous-Dataset/CycleGAN-Pix2Pix/results/facades_pix2pix/test_latest/fake"
+gtr_dir = "/home/p109g2208/arirang/UIRP1/Pix2Pix/results/facades_pix2pix/test_latest/fake"
 
 ## generated im paths
-gen_dir = "/home/p109g2208/arirang/uimin/SAR2Opt-Heterogeneous-Dataset/CycleGAN-Pix2Pix/results/facades_pix2pix/test_latest/real"
+gen_dir = "/home/p109g2208/arirang/UIRP1/Pix2Pix/results/facades_pix2pix/test_latest/real"
 
 
 ### compute SSIM and PSNR

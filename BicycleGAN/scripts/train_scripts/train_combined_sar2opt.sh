@@ -14,14 +14,16 @@ NITER_DECAY=100
 # training
 GPU_ID=0
 DISPLAY_ID=0
-CHECKPOINTS_DIR=./checkpoint/${CLASS}/
+CHECKPOINTS_DIR=./checkpoint/
 NAME=${CLASS}_${MODEL}
 
 # command
 CUDA_VISIBLE_DEVICES=${GPU_ID} 
 python ./train.py \
   --display_id ${DISPLAY_ID} \
-  --dataroot /home/p109g2208/arirang/UIRP1/sar2opt_dataset/sar2opt \
+## Change dataroot #################################################
+  --dataroot /home/p109g2208/arirang/UIRP1/sar2opt_dataset/sar2opt \ 
+####################################################################
   --name ${NAME} \
   --model ${MODEL} \
   --direction ${DIRECTION} \
