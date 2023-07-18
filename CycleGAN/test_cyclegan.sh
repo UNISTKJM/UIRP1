@@ -11,4 +11,4 @@
 
 
 ################# change dataroot ############################### change checkpoints directory #####################################
-python test.py --dataroot /home/p109g2208/arirang/UIRP1/sar2opt --checkpoints_dir /home/p109g2208/arirang/UIRP1/CycleGAN/checkpoint --display_id 0 --name sar2opt_cyclegan --model cycle_gan --phase test --no_dropout
+python test.py --dataroot /change/to/your/dataroot --checkpoints_dir /change/to/your/checkpoint/directory --display_id 0 --name sar2opt_cyclegan --model cycle_gan --phase test --no_dropout

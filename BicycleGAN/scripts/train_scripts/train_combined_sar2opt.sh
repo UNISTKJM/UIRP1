@@ -22,7 +22,7 @@ CUDA_VISIBLE_DEVICES=${GPU_ID}
 python ./train.py \
   --display_id ${DISPLAY_ID} \
 ## Change dataroot #################################################
-  --dataroot /home/p109g2208/arirang/UIRP1/sar2opt_dataset/sar2opt \ 
+  --dataroot /change/to/your/dataroot \ 
 ####################################################################
   --name ${NAME} \
   --model ${MODEL} \

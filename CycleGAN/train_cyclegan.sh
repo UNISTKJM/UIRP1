@@ -11,4 +11,4 @@
 
 
 ################# change dataroot###############################
-python train.py --dataroot /home/p109g2208/arirang/UIRP1/sar2opt --display_id 0 --name sar2opt_cyclegan --model cycle_gan --batch_size 4
+python train.py --dataroot /change/to/your/dataroot --display_id 0 --name sar2opt_cyclegan --model cycle_gan --batch_size 4
