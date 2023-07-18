@@ -12,11 +12,11 @@ Using Slurm GPU System
 2 Datasets will be downloaded. One is for BicycleGAN and Pix2Pix, and another one is for the CycleGAN (Will be merged)
 dataset will be downloaded at 
 
-  pwd/sar2opt_dataset/sar2opt
+    pwd/sar2opt_dataset/sar2opt
 
 and
 
-  pwd/sar2opt
+    pwd/sar2opt
 
 ## 3. Train and test BicycleGAN, CycleGAN, Pix2pix
 Check README at each directory
