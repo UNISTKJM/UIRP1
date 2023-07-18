@@ -23,7 +23,7 @@ def split_by_name(dir_path, real_save_path, fake_save_path):
             copy(tmp_file, fake_save_path + os.sep + file)
 
 if __name__ == '__main__':
-    dir_path = './BicycleGAN/results/sar2opt/test/images'
-    real_path = './BicycleGAN/results/sar2opt/test/real'
-    fake_path = './BicycleGAN/results/sar2opt/test/fake'
+    dir_path = '../BicycleGAN/results/sar2opt/test/images'
+    real_path = '../BicycleGAN/results/sar2opt/test/real'
+    fake_path = '../BicycleGAN/results/sar2opt/test/fake'
     split_by_name(dir_path, real_path, fake_path)
