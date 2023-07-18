@@ -1,7 +1,7 @@
-mkdir BicycleGAN/results/sar2opt/test/real
-mkdir BicycleGAN/results/sar2opt/test/fake
+python psnr_ssim/split_bicyclegan.py
+python psnr_ssim/split_cyclegan.py
+python psnr_ssim/split_pix2pix.py
 
-python BicycleGAN/split_real_fake.py
-
-python BicycleGAN/metric/psnr_ssim.py
-
+python psnr_ssim/psnr_ssim_bicyclegan.py
+python psnr_ssim/psnr_ssim_cyclegan.py
+python psnr_ssim/psnr_ssim_pix2pix.py
