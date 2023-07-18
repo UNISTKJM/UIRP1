@@ -24,7 +24,7 @@ INPUT_NC=3  # number of channels in the input image
 GPU_ID=0   # gpu id
 NUM_TEST=626 # number of input images duirng test
 NUM_SAMPLES=1 # number of samples per input images
-DATA_ROOT=/home/p109g2208/arirang/UIRP1/sar2opt_dataset/sar2opt
+DATA_ROOT=../sar2opt_dataset/sar2opt
 
 # command
 CUDA_VISIBLE_DEVICES=${GPU_ID} python ./test.py \

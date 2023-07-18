@@ -9,10 +9,4 @@
 #SBATCH --gres=gpu:1 #GPU 개수
 #SBATCH --nodelist=gpu2080-05
 
-
-################# change dataroot###############################
-<<<<<<< HEAD
-python train.py --dataroot /home/p109g2208/arirang/UIRP1/sar2opt --name sar2opt_cyclegan --model cycle_gan --batch_size 4
-=======
-python train.py --dataroot /change/to/your/dataroot --display_id 0 --name sar2opt_cyclegan --model cycle_gan --batch_size 4
->>>>>>> 0509c8bddf8a260934ae33de7e73b0929f3d283c
+python train.py --dataroot ../sar2opt --name sar2opt_cyclegan --model cycle_gan --batch_size 4

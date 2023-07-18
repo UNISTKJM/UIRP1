@@ -25,13 +25,12 @@ NITER_DECAY=100
 # training
 GPU_ID=0
 NAME=${CLASS}
-DATA_ROOT=/home/p109g2208/arirang/UIRP1/sar2opt_dataset/sar2opt
+DATA_ROOT=../sar2opt_dataset/sar2opt
 
 # command
 CUDA_VISIBLE_DEVICES=${GPU_ID} 
 python ./train.py \
-  --dataroot ${DATA_ROOT} \ 
-  --name ${NAME} \
+  --dataroot ${DATA_ROOT} --name ${NAME} \
   --model ${MODEL} \
   --direction ${DIRECTION} \
   --load_size ${LOAD_SIZE} \
