@@ -23,7 +23,8 @@ def split_by_name(dir_path, real_save_path, fake_save_path):
             copy(tmp_file, fake_save_path + os.sep + file)
 
 if __name__ == '__main__':
-    dir_path = '../Pix2Pix/results/facades_pix2pix/test_latest/images'
-    real_path = '../Pix2Pix/results/facades_pix2pix/test_latest/real'
-    fake_path = '../Pix2Pix/results/facades_pix2pix/test_latest/fake'
+    dir_path = './Pix2Pix/results/facades_pix2pix/test_latest/images'
+    real_path = './Pix2Pix/results/facades_pix2pix/test_latest/real'
+    fake_path = './Pix2Pix/results/facades_pix2pix/test_latest/fake'
+    print("Split Pix2pix...")
     split_by_name(dir_path, real_path, fake_path)

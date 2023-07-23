@@ -41,12 +41,13 @@ def SSIMs_PSNRs(gtr_dir, gen_dir, im_res=(256, 256)):
     return np.array(ssims), np.array(psnrs), np.array(cossim)
 
 ## Change Here ##############################
-gtr_dir = "../Pix2Pix/results/facades_pix2pix/test_latest/real"  #
-gen_dir = "../Pix2Pix/results/facades_pix2pix/test_latest/fake"  #
+gtr_dir = "./Pix2Pix/results/facades_pix2pix/test_latest/real"  #
+gen_dir = "./Pix2Pix/results/facades_pix2pix/test_latest/fake"  #
 #############################################
 
 
 ### compute SSIM and PSNR
+print("Calculate Pix2Pix...")
 SSIM_measures, PSNR_measures, COSSIM_measures = SSIMs_PSNRs(gtr_dir, gen_dir)
 print ("SSIM on {0} samples".format(len(SSIM_measures)))
 print ("Mean: {0} std: {1}".format(np.mean(SSIM_measures), np.std(SSIM_measures)))
