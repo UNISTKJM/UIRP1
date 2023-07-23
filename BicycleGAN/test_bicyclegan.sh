@@ -25,7 +25,6 @@ GPU_ID=0   # gpu id
 NUM_TEST=626 # number of input images duirng test
 NUM_SAMPLES=1 # number of samples per input images
 DATA_ROOT=../sar2opt_dataset/sar2opt
-
 # command
 CUDA_VISIBLE_DEVICES=${GPU_ID} python ./test.py \
   --results_dir ${RESULTS_DIR} \

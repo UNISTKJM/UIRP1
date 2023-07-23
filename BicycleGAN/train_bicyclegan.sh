@@ -25,7 +25,7 @@ NITER_DECAY=100
 # training
 GPU_ID=0
 DISPLAY_ID=0
-CHECKPOINTS_DIR=./checkpoint/${CLASS}/
+CHECKPOINTS_DIR=./checkpoint/
 NAME=${CLASS}_${MODEL}
 
 # command
