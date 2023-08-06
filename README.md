@@ -1,7 +1,7 @@
 # UIRP1
 Using Slurm GPU System
 
-## 0. Conda Environment
+## 0. Environment Settings
 
     python 3.10.12
     pytorch 2.0.0
