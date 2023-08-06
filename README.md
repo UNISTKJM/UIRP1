@@ -17,7 +17,7 @@ Using Slurm GPU System
 
     bash sar2opt_dataset_download.sh
 
-2 Datasets and checkpoint examples will be downloaded. One is for BicycleGAN and Pix2Pix, and another one is for the CycleGAN (Will be merged)
+2 Datasets and checkpoint examples will be downloaded. One is for BicycleGAN and Pix2Pix, and another one is for the CycleGAN
 dataset will be downloaded at 
 
     pwd/sar2opt_dataset/sar2opt
